@@ -51,9 +51,9 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
     - I have my interests in building educatinal tools. I am currently working as a teaching assistant for one of the computer science courses at my school, CMSC330: Organzation of Programming Languages. There are some international students in my discussion sections, who have hard time understanding different programming concepts when explained in English. I would like to develop some web applications that could visualize some programing concepts, such as fucntional programming(currying, folding, mapping), memory leaks, lambda calculus, and finite state automata. I would like to know a few things
-    - How we can implement some visualization tools
+    - How we can implement some visualization tools.
     - Good ways to document web applications so it is user-friendly.
-    - How to keep the project open-source and yet still secure from malicious codes
+    - How to keep the project open-source and yet still secure from malicious codes.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
     - I would have worked on some html and css in order to make the project more compatible on any devices, which includes both the tablets and phone as well. I tried testing the project on my phone with more than four buttons, and the buttons were too big, so I would actually have to scroll down on my phone to see other buttons, and even so I would not be able to see all buttons, as well as the timer and number of mistakes left.
