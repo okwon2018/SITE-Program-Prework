@@ -20,7 +20,6 @@ body {
   color: white;
   text-align: center;
 }
-
 h1 {
   font-family: verdana, arial, sans-serif;
 }
@@ -32,6 +31,12 @@ button {
 }
 
 #gameButtonArea > button {
+  width:200px;
+  height:200px;
+  margin:2px;
+}
+
+img {
   width:200px;
   height:200px;
   margin:2px;

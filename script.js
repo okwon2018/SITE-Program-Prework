@@ -29,6 +29,7 @@ function startGame() {
   timeLeft = 10;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
   playClueSequence();
 }
 function stopGame() {
@@ -41,6 +42,7 @@ function stopGame() {
   document.getElementById("timer").innerHTML = "";
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
+  document.getElementById("mistakes").innerHTML = "";
 }
 
 // Sound Synthesis Functions
@@ -111,6 +113,7 @@ function playClueSequence() {
   timeLeft = 10;
   clearInterval(time);
   guessCounter = 0;
+  document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
   let delay = nextClueWaitTime; //set delay to initial wait time
   let trigger = false;
   for (let i = 0; i <= progress; i++) {
