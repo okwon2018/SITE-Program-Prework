@@ -147,7 +147,7 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-
+  
   if (btn == pattern[guessCounter] && !wrongSeq) {
     // guess is correct
     if (guessCounter == progress) {
@@ -193,4 +193,3 @@ g.connect(context.destination);
 g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
-
