@@ -26,7 +26,7 @@ function startGame() {
   mistakes = 2;
   progress = 0;
   gamePlaying = true;
-  timeLeft = 10;
+  timeLeft = 15;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
@@ -110,7 +110,7 @@ function decreaseTime() {
 
 function playClueSequence() {
   context.resume();
-  timeLeft = 10;
+  timeLeft = 15;
   clearInterval(time);
   guessCounter = 0;
   document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
@@ -120,7 +120,7 @@ function playClueSequence() {
     // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]); // set a timeout to play that clue
-    clueHoldTime *= 0.97;
+    clueHoldTime *= 0.95;
     delay += clueHoldTime;
     delay += cluePauseTime;
     if (i == progress) {
