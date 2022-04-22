@@ -15,7 +15,7 @@ var time; // variable for the ID returned by setInterval
 var timeLeft; // variable to display the time left on the screen
 
 function setPattern() {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 4; i++) {
     pattern[i] = Math.floor(Math.random() * 6) + 1;
   }
 }
@@ -26,10 +26,12 @@ function startGame() {
   mistakes = 2;
   progress = 0;
   gamePlaying = true;
-  timeLeft = 15;
+  timeLeft = 7;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
-  document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
+  document.getElementById("mistakes").innerHTML = `Strikes: ${
+    mistakes + 1
+  } available`;
   playClueSequence();
 }
 function stopGame() {
@@ -110,10 +112,12 @@ function decreaseTime() {
 
 function playClueSequence() {
   context.resume();
-  timeLeft = 15;
+  timeLeft = 7;
   clearInterval(time);
   guessCounter = 0;
-  document.getElementById("mistakes").innerHTML = `Mistakes: ${mistakes+1} available`;
+  document.getElementById("mistakes").innerHTML = `Strikes: ${
+    mistakes + 1
+  } available`;
   let delay = nextClueWaitTime; //set delay to initial wait time
   let trigger = false;
   for (let i = 0; i <= progress; i++) {
@@ -147,7 +151,7 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-  
+
   if (btn == pattern[guessCounter] && !wrongSeq) {
     // guess is correct
     if (guessCounter == progress) {
@@ -174,8 +178,9 @@ function guess(btn) {
       wrongSeq = false;
       playClueSequence();
     } else {
-      // the sequence is not t it final sound/color, but has mistakes
-      if (mistakes <= 0) {// the player didn't get 3 sequences correctly, he/she loses
+      // the sequence is not at its final sound/color, but has mistakes
+      if (mistakes <= 0) {
+        // the player didn't get 3 sequences correctly, he/she loses
         loseGame();
       }
       guessCounter += 1; // the player got less than three sequences wrong, game continues
