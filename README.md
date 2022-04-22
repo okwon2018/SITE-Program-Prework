@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 - [x] The number of mistakes available is displayed
 
 ## Video Walkthrough (GIF)
-1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generting gif)
+1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generating gif)
 ![](https://i.imgur.com/IepALQA.gif)
 2. Winning game (decreased the array of sequences to 4 and decreased the timer to 7 for generating gif)
 ![](https://i.imgur.com/5lW9bPE.gif)
