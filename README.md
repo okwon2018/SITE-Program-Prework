@@ -24,21 +24,24 @@ The following **optional** features are implemented:
 * [x] Playback speeds up on each turn
 * [x] Computer picks a different pattern each time the game is played
 * [x] Player only loses after 3 mistakes (instead of on the first mistake)
-* [ ] Game button appearance change goes beyond color (e.g. add an image)
+* [x] Game button appearance change goes beyond color (e.g. add an image)
 * [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
 * [x] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
 - [x] The number of mistakes available is displayed
+- [x] When game buttons are clicked or sequence is shown, buttons gradually change colors
+- [x] Made the buttons circular
+- [x] When the cursor is hovering, the buttons would rise in y-axis
+- [x] Background image added 
 
 ## Video Walkthrough (GIF)
 1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generating gif)
-![](https://i.imgur.com/IepALQA.gif)
-2. Winning game (decreased the array of sequences to 4 and decreased the timer to 7 for generating gif)
-![](https://i.imgur.com/5lW9bPE.gif)
-3. Generating random sequences  
-![](https://i.imgur.com/Jcm6IDc.gif)
+2. Winning game perfectly
+3. Winning game with some mistakes
+4. Randomly generating sequences
+
 
 
 ## Reflection Questions
