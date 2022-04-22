@@ -33,12 +33,14 @@ The following **additional** features are implemented:
 - [x] The number of mistakes available is displayed
 
 ## Video Walkthrough (GIF)
+- Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generting gif)
+![](https://i.imgur.com/IepALQA.gif)
+- Winning game (decreased the array of sequences to 4 and decreased the timer to 7 for generating gif)
+![](https://i.imgur.com/5lW9bPE.gif)
+- Generating random sequences
+![](https://i.imgur.com/Jcm6IDc.gif)
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -82,3 +84,4 @@ If you recorded multiple GIFs for all the implemented features, you can add them
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
