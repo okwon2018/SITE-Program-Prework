@@ -15,7 +15,7 @@ var time; // variable for the ID returned by setInterval
 var timeLeft; // variable to display the time left on the screen
 
 function setPattern() {
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 8; i++) {
     pattern[i] = Math.floor(Math.random() * 6) + 1;
   }
 }
@@ -98,8 +98,8 @@ function decreaseTime() {
     loseGame();
   }
   if (timeLeft == 0) {
-    clearInterval(time);
     mistakes -= 1;
+    clearInterval(time);
     guessCounter += 1;
     progress += 1;
     playClueSequence();
@@ -120,7 +120,7 @@ function playClueSequence() {
     // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]); // set a timeout to play that clue
-    clueHoldTime *= 0.93;
+    clueHoldTime *= 0.97;
     delay += clueHoldTime;
     delay += cluePauseTime;
     if (i == progress) {
@@ -193,3 +193,4 @@ g.connect(context.destination);
 g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
+
