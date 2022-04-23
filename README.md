@@ -1,6 +1,6 @@
 Submitted by: Ohsung Kwon
 
-Time spent: 4 hours spent in total
+Time spent: 6 hours spent in total
 
 Link to project: https://psychedelic-just-hedgehog.glitch.me/
 
