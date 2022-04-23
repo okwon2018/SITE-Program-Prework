@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 - [x] Background image added 
 
 ## Video Walkthrough (GIF)
-1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generating gif)
+1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7)
     ![](https://user-images.githubusercontent.com/47762109/164841897-5c92a93e-5e9e-4bcb-bb9c-b647b54fa38d.gif)
 2. Winning game with some mistakes   
     ![](https://user-images.githubusercontent.com/47762109/164842866-9793c308-4e01-4485-a419-817b0e081bce.gif)
