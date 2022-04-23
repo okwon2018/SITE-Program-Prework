@@ -38,10 +38,13 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough (GIF)
 1. Losing game through combination of mistakes and timer countdown (decreased the timer to 7 for generating gif)
-2. Winning game perfectly
-3. Winning game with some mistakes
-4. Randomly generating sequences
-
+    ![](https://user-images.githubusercontent.com/47762109/164841897-5c92a93e-5e9e-4bcb-bb9c-b647b54fa38d.gif)
+2. Winning game with some mistakes   
+    ![](https://user-images.githubusercontent.com/47762109/164842866-9793c308-4e01-4485-a419-817b0e081bce.gif)
+3. Winning game perfectly  
+    ![ezgif com-gif-maker-12](https://user-images.githubusercontent.com/47762109/164844306-2e0dffde-6e98-48d9-8fe5-91304bc8e071.gif)
+4. Randomly generating sequences   
+    ![](https://user-images.githubusercontent.com/47762109/164844180-78d44707-8717-47aa-992b-7c74d969ffb0.gif)
 
 
 ## Reflection Questions
@@ -49,26 +52,22 @@ The following **additional** features are implemented:
     - I have used w3schools to read different built-in functions, such as setInterval and clearInterval. For the color of additional boxes, I used rapidtables.com to find the rgb combination that I wanted.
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-    - When I was working on this prework, there were a few challenges that I encountered. Below are the two most notable challenges.
-    - Figuring out the definition of mistakes and implementing challenged me. Some may think that any mistakes made in a sequence as one, while the others may think that if there is n number of mistakes, there are n mistakes. I had to think which one is more logical. For this purpose I actually had to ask my friends what mistakes should be defined as. Majority of them told me that any number of mistakes in a sequence should be considered as one. To implement this functionality, I had to make sure that I had a flag to switch depending on whether if there is a mistake in a sequence. If a user could afford to make a mistake, and it is not the end of the sequence, I would treat it as if there was no mistake made. however, if it is the end of the sequence and the user made a mistake, I would decrement the number of mistake by one. To call the loseGame function correctly, my function calls it only when the number of mistakes is less than or equal to zero.
-    - Figuring out where to call setInterval() and clearInterval() gave me some challenge, because if setInterval is not correctly cleared, it would mess up the program's timer countdown. Before I started writing out the code, I had to figure out when setInterval() should be called. I decided to call it at the end of playClueSequence(), because guess(btn) and startGame() both call playClueSequence(). I also had to create my own function decreaseTime(), which decrements the time displayed by one when called with setInterval(). The function calls clearInterval(), decrement mistake counter by one and call playSequence() to make sure it moves on to the next sequence when the mistake is made, if the time left is zero. Else, it would just decrement the time by one. I also called clearInteval() in the beginning of playClueSequence() to make sure that every setInterval() I made would be cleared.
+    - A challenge I encountered while creating this submission was figuring out how to define user strikes. There were two definitions that I considered implementing. The first definition of a strike was counting any mistake made during the current pattern count as only one mistake. The second was counting each mistake made during a pattern individually. To determine which definition made more sense to implement from a user’s perspective, I contacted some of my friends and had them try out the game. A majority of them told me that any number of mistakes in a sequence should be considered as one, so that is the approach I implemented. To implement this functionality, I created a boolean variable that switched to true whenever a mistake was discovered, and resets back to false between sequences. If a user could afford to make a mistake, and it is not the end of the sequence, I would treat it as if there was no mistake made. However, if it is the end of the sequence and the user made a mistake, I would decrement the number of mistakes by one. Finally, my function called the loseGame function when the number of mistakes is less than or equal to zero. 
+
+    - Another challenge I encountered while creating this submission was figuring out where to call the setInterval() and clearInterval() functions. I realized that if setInterval was not cleared correctly, it would mess up the program's timer countdown. So, before writing the code, I had to figure out when setInterval() should be called. I decided to call it at the end of playClueSequence(), because guess(btn) and startGame() both call playClueSequence(). I also had to create my own function, decreaseTime(), which decrements the time displayed by one when called by setInterval(). decreaseTime() also calls clearInterval(), decrements the mistake counter by one, and calls playSequence() to make sure it moves on to the next sequence when a mistake is made or if the time left is zero, othersise, it would just decrement the time by one.
+Last but not least, I called clearInteval() in the beginning of playClueSequence() to make sure that every setInterval() I called would be cleared.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-    - Not everyone is fortunate enough to attend a university like myself. So, I naturally built up my interests in building educatinal tools. I am currently working as a teaching assistant for one of the computer science courses( CMSC330: Organzation of Programming Languages) at my school. During my discussion I realized that even students who attend university lectures are having difficulties understanding some programming concepts. I always thought it would be nice to build a web application to facilitate learning computer science for people who are not able to attend universities. I would like to develop some web applications that could visualize some programing concepts, such as fucntional programming(currying, folding, mapping), memory leaks, lambda calculus, and finite state automata. By doing so, students can interact with the program, improving their learning experience. But most importantly, people who are in situations that prevents them from attending university could teach themselves more effectively. For such purpose, I would like to know a few things.
-    - How we can implement some visualization tools.
-    - Good ways to document web applications so it is user-friendly.
-    - How to keep the project open-source and yet still secure from malicious codes.
+    - After completing my submission, one question I have about web development is how are large tech companies able to create websites that can handle millions of users at once? Being able to scale efficiently is a very important problem that can help boost a user’s experience and is an important factor when a user is considering using your website again since no one wants to use a slow service. Another question I have about web development is how are secure websites created and how can we authenticate and store user data while preventing outside attacks. Another question I have about web development is how is data exchanged in multi-user environments with users from all over the world in a matter of seconds.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-    - I would have worked on some html and css in order to make the project more compatible on any devices, which includes both the tablets and phone as well. I tried testing the project on my phone with more than four buttons, and the buttons were too big, so I would actually have to scroll down on my phone to see other buttons, and even so I would not be able to see all buttons, as well as the timer and number of mistakes left.
-    - I would also try to get rid of some code duplication made. In guess(btn), there is a duplicated code for two versions. First is when the mistake is made while a sequence is not finished and the second is when the mistake is not made and the sequence is not over yet.
-    - I would also make my code more understandable by adding some more descriptive comments, so others can modify my project in their own designs.
+    - If I had a few more hours to work on this project, one thing I would have worked on is some html and css in order to make the project more compatible on any devices, which includes both the tablets and phone as well. I tried testing the project on my phone with more than four buttons, and the buttons were too big, so I would actually have to scroll down on my phone to see other buttons, and even so I would not be able to see all buttons, as well as the timer and number of mistakes left. Another thing I would have worked on if I had more time is using multithreading to prevent a data race that occurs during the game. If a user presses more buttons than the current sequence is expecting, the extra buttons clicked are counted as guesses in the following sequence. To fix this issue, we can use multithreading to ensure we aren’t modifying the guessCounter variable for a future sequence. Last but not least, I would also refactor my code to make it more understandable and to avoid code duplication. 
+
 
 
 
 ## Interview Recording URL Link
-
-[My 5-minute Interview Recording](your-link-here)
+https://www.loom.com/share/881c80e0bb89485b95ae5dcba0259147
 
 
 ## License
